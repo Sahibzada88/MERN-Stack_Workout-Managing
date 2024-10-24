@@ -1,7 +1,17 @@
 //libraries
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
+
+app.use(cors(
+  {
+    origin:["https://"]
+    methods : ["POST", "GET"],
+    credentials: true
+  }
+
+));
 
 //routes fetchers
 const workoutRoutes = require('./routes/workouts.js')
