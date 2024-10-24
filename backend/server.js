@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.use("/api/workouts/", workoutRoutes)
 
 //database connection
-mongo_url = 'mongodb+srv://sahibzadaabdullah8:zF9dHnZdCapXkWpF@mernstack.6dh6a1c.mongodb.net/?retryWrites=true&w=majority&appName=mernstack'
+mongo_url = process.env.string || 'mongodb+srv://sahibzadaabdullah8:zF9dHnZdCapXkWpF@mernstack.6dh6a1c.mongodb.net/?retryWrites=true&w=majority&appName=mernstack'
 mongoose.connect(mongo_url)
   .then(() => {
     //Server listening
