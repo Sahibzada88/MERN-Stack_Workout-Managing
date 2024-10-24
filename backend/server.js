@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors(
   {
-    origin:["https://mern-stack-workout-managing-frontend.vercel.app/", "https://mern-stack-workout-managing-backend.vercel.app/"]
+    origin:["https://mern-stack-workout-managing-frontend.vercel.app/", "https://mern-stack-workout-managing-backend.vercel.app/"],
     methods : ["POST", "GET"],
     credentials: true
   }
